@@ -1,34 +1,23 @@
-# MODUL01 - Template to create a new MLAB module
+# MPCIEFTDI01
 
-MLAB's module template repository. Please [use the "Use this template" button](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template) to create a new MLAB module from this repository.
+MPCIEFTDI01 is a mini-PCI-E breadboard with a FTDI io and a 5V power supply. This board is intended for an easy and reliable source of UART/I2C/SPI or GPIO interface to a devices that are equipped with that mPCIe slot. MiniPCIe slot is often found in network devices (routers), single-board computers or other in other SOC systems. 
 
-The new module repository name must be identical to proposed new module name. Please look in [MLAB design rules](https://wiki.mlab.cz/doku.php?id=en:rules#identification_of_modules) for acceptable naming convention.
-After creating of the new repository, [rename](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/renaming-a-branch) the default git branch to be named corresponding to the revision of the module. Generally adding the "A" suffix to the module name. Therefore new repository named MODULENAME01 should has the branch name MODULENAME01A. 
+## Example of use
+ * Extension of UART/GPIO Computer interface without having to use external hardware
+ * Interface for obtaining precission time from GPS with support of PPS signal. 
+ * 
 
-Then [clone the new MLAB's module repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to your workstation. After that perform following steps in the cloned repository. 
+## Known compatibile devices
 
-## 1. Initialize the assets submodule, update it to latest version
-```bash
-  git submodule update --init --remote
-```
+### Turris Omnia router
 
-## 2. Copy the fresh automation workflows
-    
-The following command copy up-to-date KiCAD automation workflow to the new MLAB module repository.
-```bash
-  cd doc/assets/workflows/
-  ./copy_workflow_to_repo.sh
-```
-## 3. Start the design work 
+### Turris MOX
+System turris MOX contains modules ?? or ?? that provides mPCIe slot. Turris Mox contains itself a GPIO interface, which has only 1.8V logic and is introduced to the processor. With this Breadbord, you add a layer that can protect the processor itself under problems.
 
-In that point you should start to design the new MLAB module project by using the [design tools](https://wiki.mlab.cz/doku.php?id=en:tools).
+### RaspberryPi CM4
+RaspberyPi CM4 is equipted with PCIE interface. With the motherboard equited with mPCIe slot, you can use this module with RaspberryPi CM4. 
 
-## 4. Replace this readme
-
-This readme should be replaced by a description of the yours new module project! :)
-Please look to the README.md in root of other modules to get an ispiration. 
-
-Thanks for contributing! 
+#### ReTerminal
+Reterminal is terminal device (computer, display+touchscreen in compact packing) from seedstudio. ReTerminal is based on RP CM4. For ReTerminal, there is extension module that provides mPCIe interface. Along this, extension module includes backed-up supply from LiIon acumulators, RS232, RS485, CAN interface and high-range voltage supply input. Extension also contains of POE input. 
 
 
-    
