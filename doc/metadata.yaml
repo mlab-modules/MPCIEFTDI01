@@ -1,0 +1,12 @@
+description: miniPCIexpress breadboard with FTDI converter
+github_branch: MPCIEFTDI01A
+github_branches:
+- MPCIEFTDI01A
+github_repo: MPCIEFTDI01
+github_url: https://github.com/mlab-modules/MPCIEFTDI01
+homepage: false
+images: []
+issues: 0
+mark: 50
+tags: []
+title: MPCIEFTDI01
